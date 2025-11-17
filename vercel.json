@@ -1,0 +1,13 @@
+{
+  "builds": [
+    {
+      "src": "docs/book.toml",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "docs/book"
+      }
+    }
+  ],
+  "installCommand": "curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.40/mdbook-v0.4.40-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=/usr/local/bin",
+  "buildCommand": "cd docs && mdbook build"
+}
