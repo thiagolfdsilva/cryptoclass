@@ -3,12 +3,10 @@
   "outputDirectory": "public",
   "routes": [
     {
-      "comment": "Rule 1: Serve the /docs directory as a static site. This rule MUST come first.",
       "src": "/docs/(.*)",
       "dest": "/docs/$1"
     },
     {
-      "comment": "Rule 2: Handle the React SPA for all other routes. This is the default SPA behavior.",
       "src": "/(.*)",
       "dest": "/index.html"
     }
