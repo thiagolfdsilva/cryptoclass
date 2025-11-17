@@ -1,24 +1,16 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "public",
-  "rewrites": [
+  "routes": [
     {
-      "source": "/:path*",
-      "destination": "/docs/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "docs.yoursite.com"
-        }
-      ]
+      "comment": "Rule 1: Serve the /docs directory as a static site. This rule MUST come first.",
+      "src": "/docs/(.*)",
+      "dest": "/docs/$1"
     },
     {
-      "source": "/docs/:path*",
-      "destination": "/docs/:path*"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "comment": "Rule 2: Handle the React SPA for all other routes. This is the default SPA behavior.",
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
