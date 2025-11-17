@@ -3,6 +3,3 @@ authors = ["user"]
 language = "en"
 src = "src"
 title = "Aula Crypto"
-
-[output.html]
-site-url = "/docs"
