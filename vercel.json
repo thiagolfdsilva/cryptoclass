@@ -1,14 +1,4 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "public",
-  "routes": [
-    {
-      "src": "/docs/(.*)",
-      "dest": "/docs/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
+  "outputDirectory": "public"
 }
