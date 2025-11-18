@@ -4,7 +4,7 @@
 
 A blockchain é um caso especial de ambiente decentralizado, outros que vale a pena citar incluem:
 
-[Multi Party Computation](https://www.fireblocks.com/what-is-mpc) - Um modelo de computação compartilhada que permite que, no caso das pontes, um conjunto de computadores assine uma transação sem que qualquer um deles tenha a chave privada completa. Similar a uma blockchain que implementa Prova de Autoridade, mas feito para passar mensagens. Em certos casos, como (Ronin)[https://docs.roninchain.com/], o mesmo grupo valida a blockchain e assina as mensagens de ponte. 
+[Multi Party Computation](https://www.fireblocks.com/what-is-mpc) - Um modelo de computação compartilhada que permite que, no caso das pontes, um conjunto de computadores assine uma transação sem que qualquer um deles tenha a chave privada completa. Similar a uma blockchain que implementa Prova de Autoridade, mas feito para passar mensagens. Em certos casos, como [Ronin](https://docs.roninchain.com/), o mesmo grupo valida a blockchain e assina as mensagens de ponte. 
 
 Distributed Hash Table (DHT) - Implementada por sistemas como [Holochain](https://www.holochain.org/), cada validador tem apenas parte dos dados.
 
