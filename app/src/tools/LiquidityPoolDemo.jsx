@@ -4,17 +4,20 @@ import { ArrowDownUp, Plus, Minus, Info } from 'lucide-react';
 export default function LiquidityPoolDemo() {
   // Configuration state
   const [showSettings, setShowSettings] = useState(true);
-  const [feePercent, setFeePercent] = useState(0.3);
+  const [feePercent, setFeePercent] = useState(0);
+  const [selectedPreset, setSelectedPreset] = useState(1);
   
-  // Token names
-  const [tokenAName, setTokenAName] = useState('TKA');
-  const [tokenBName, setTokenBName] = useState('TKB');
+  // Token names and symbols
+  const [tokenAName, setTokenAName] = useState('Real');
+  const [tokenASymbol, setTokenASymbol] = useState('BRL');
+  const [tokenBName, setTokenBName] = useState('Dólar');
+  const [tokenBSymbol, setTokenBSymbol] = useState('USD');
   
   // Initial values for reset
   const [initialPoolTokenA, setInitialPoolTokenA] = useState(1000);
-  const [initialPoolTokenB, setInitialPoolTokenB] = useState(2000);
-  const [initialUserTokenA, setInitialUserTokenA] = useState(500);
-  const [initialUserTokenB, setInitialUserTokenB] = useState(1000);
+  const [initialPoolTokenB, setInitialPoolTokenB] = useState(1000);
+  const [initialUserTokenA, setInitialUserTokenA] = useState(1000);
+  const [initialUserTokenB, setInitialUserTokenB] = useState(0);
   
   // Pool state (using constant product formula: x * y = k)
   const [poolTokenA, setPoolTokenA] = useState(1000);
@@ -237,6 +240,47 @@ export default function LiquidityPoolDemo() {
     } else {
       setAddLiquidityA('');
     }
+  };
+
+  const presets = {
+    1: {
+      name: 'BRL/USD Exchange',
+      tokenAName: 'Real',
+      tokenASymbol: 'BRL',
+      tokenBName: 'Dólar',
+      tokenBSymbol: 'USD',
+      poolTokenA: 1000,
+      poolTokenB: 1000,
+      userTokenA: 1000,
+      userTokenB: 0,
+      feePercent: 0
+    },
+    2: {
+      name: 'Standard Pool',
+      tokenAName: 'Token A',
+      tokenASymbol: 'TKA',
+      tokenBName: 'Token B',
+      tokenBSymbol: 'TKB',
+      poolTokenA: 1000,
+      poolTokenB: 2000,
+      userTokenA: 500,
+      userTokenB: 1000,
+      feePercent: 0.3
+    }
+  };
+
+  const applyPreset = (presetNum) => {
+    const preset = presets[presetNum];
+    setTokenAName(preset.tokenAName);
+    setTokenASymbol(preset.tokenASymbol);
+    setTokenBName(preset.tokenBName);
+    setTokenBSymbol(preset.tokenBSymbol);
+    setInitialPoolTokenA(preset.poolTokenA);
+    setInitialPoolTokenB(preset.poolTokenB);
+    setInitialUserTokenA(preset.userTokenA);
+    setInitialUserTokenB(preset.userTokenB);
+    setFeePercent(preset.feePercent);
+    setSelectedPreset(presetNum);
   };
 
   return (

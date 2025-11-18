@@ -22,13 +22,13 @@ Entre os juros gerados pelos empréstimos, 10% é coletado pelo protocolo, fazen
 Para manter a segurança dos depósitos, evitando riscos que poderiam acontecer devido à mudanças bruscas de parâmetros, qualquer mudança é sujeita ao processo de governança. Que no caso do AAVE v2, é:
 
 
-1. PROPOSTA - Holder com >80K AAVE submete proposta no fórum de governança
+1. **PROPOSTA** - Holder com >80K AAVE submete proposta no fórum de governança
 
-2. DISCUSSÃO - Comunidade debate por 5-7 dias, refinando a proposta
+2. **DISCUSSÃO** - Comunidade debate por 5-7 dias, refinando a proposta
 
-3. VOTAÇÃO - Votação on-chain por 3 dias. Quórum mínimo: 320K AAVE
+3. **VOTAÇÃO** - Votação on-chain por 3 dias. Quórum mínimo: 320K AAVE
 
-4. EXECUÇÃO - Se aprovada (>50%), execução automática após timelock de 24h 
+4. **EXECUÇÃO** - Se aprovada (>50%), execução automática após timelock de 24h 
 
 Portanto qualquer mudança precisa de que grupos com quantidades significativas de tokens (e portanto com interesses alinhados ao crescimento do protocolo no longo prazo) proponham e aprovem as mudanças. E o timelock de 24h permite que qualquer pessoa afetada pelas mudanças possa se adequar a tempo. Reduzindo significativamente os incentivos e mecanismos de ação para um possível ataque.
 
