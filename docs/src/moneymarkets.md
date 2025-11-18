@@ -6,21 +6,26 @@ Money markets são mercados que permitem empréstimo colateralizado. A interface
 
 O protocolo define parâmetros que estabelecem a taxa de juros em função da utilização do ativo:
 
-https://app.aave.com/reserve-overview/?underlyingAsset=0xdac17f958d2ee523a2206206994597c13d831ec7&marketName=proto_mainnet_v3
+![AAVE Screenshot](./aaveshot2.png)
+[source](https://app.aave.com/reserve-overview/?underlyingAsset=0xdac17f958d2ee523a2206206994597c13d831ec7&marketName=proto_mainnet_v3)
 
 Para manter a integridade do protocolo, cada protocolo ativo define uma parâmetros para liquidação. Por exemplo, no USDT temos os seguintes parâmetros:
 
-Max LTV: 75%
-Liquidation Threshold: 78%
-Liquidation Penalty: 4.5%
-Reserve Factor: 10%
+**Max LTV**: 75%
+
+**Liquidation Threshold**: 78%
+
+**Liquidation Penalty**: 4.5%
+
+**Reserve Factor**: 10%
 
 Nesse caso, com $1000 em USDT depositados, o usuário poderia pegar um empréstimo de até $750 em outros tokens, como WBTC. Caso a moeda emprestada se valorize e o valor devido chegue a $780, o protocolo automaticamente coloca à venda parte do colateral para pagar metade da dívida. A "multa" de 4.5% serve para recompensar os "liquidadores", incentivando-os a agir rápido e manter a integridade do protocolo.
 
 Entre os juros gerados pelos empréstimos, 10% é coletado pelo protocolo, fazendo parte de reservas de segurança e recompensas no ecossistema, e 90% é distribuído entres os depositantes.
 
-Para manter a segurança dos depósitos, evitando riscos que poderiam acontecer devido à mudanças bruscas de parâmetros, qualquer mudança é sujeita ao processo de governança. Que no caso do AAVE v2, é:
+### Governança
 
+Para manter a segurança dos depósitos, evitando riscos que poderiam acontecer devido à mudanças bruscas de parâmetros, qualquer mudança é sujeita ao processo de governança. Que no caso do AAVE v2, é:
 
 1. **PROPOSTA** - Holder com >80K AAVE submete proposta no fórum de governança
 

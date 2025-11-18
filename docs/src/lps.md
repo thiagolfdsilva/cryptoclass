@@ -36,6 +36,6 @@ O produto constante foi mantido (k = 1,000,000), mas o preço implícito mudou s
 - **Preço final**: 1 USD = 4 BRL
 - **Variação**: USD valorizou 300% em relação ao BRL na pool
 
-Eu fiz uma demonstração simples dessa piscina liquidez aqui: https://www.thiago.wiki.br/toolkit
+Eu fiz uma demonstração simples dessa piscina liquidez [aqui](https://www.thiago.wiki.br/toolkit)
 
 Onde no início temos uma piscina de liquidez com 1000 Reais e 1000 Dólares, além de 1000 Reais em carteira para trocar por dólar. Sugiro fazer de pouco em pouco para ver como o preço muda de acordo com que a negociação é feita. As proporções, taxas, ... podem ser mudadas em "Settings".
